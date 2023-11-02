@@ -92,11 +92,10 @@ int main()
 
     printf("Please input the year,the program will give you the calendar:");
     scanf("%d", &year);
-    while (year <= 0)
+    while ((scanf("%d", &year) != 1) || year <= 0)
     {
-        printf("Don't input the BCE year!  Reinput:");
+        printf("Please input a CE year!  Reinput:");
         fresh_stdin();
-        scanf("%d", &year);
     }
     printf("\n\n");
 
